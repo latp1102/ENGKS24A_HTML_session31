@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Todolist</h1>
+    <div>
+      <form id="form">
+        <input id="i=job-name" type="text" />
+        <button type="submit" id="btn-submit">Submit</button>
+      </form>
+      <span id="error"></span>
+    </div>
+    <ul id="list-job">
+      <li>Quet nhà</li>
+      <li>Giat đồ</li>
+      <li>Chơi</li>
+    </ul>
+    <script>
+      
+      const inputElement = document.querySelector("#job-name");
+      const formElement = document.querySelector("#form");
+      const btnElement = document.querySelector("#btn-submit");
+      const listJobElement = document.querySelector("#list-job");
+      const errorElement = document.querySelector("#error");
+      let inputVlaue;
+      let job = [];
+
+      function renderJob(){
+        jobs.forEach((job, index)=> {
+            // tạo ra 1 thẻ li
+            const liElement = document.createElement("li");
+            // gán nội dugn cho từng thẻ li
+
+            liElement.textContent = job.name;
+
+            // gán thẻ li làm con của ul\
+            listJobElement.appendChild(liElement);
+
+            job.push(newJob);
+
+            inputElement.value = "";
+            renderJob();
+
+            alert("thêm thnhf công")
+        });
+      }
+
+      //lấy giá trị bên trong input
+
+    //   inputElement.addEventListener("input", function (event) {
+    //     // console.log(event.target.value);
+        
+    //     if (!event.target.value){
+    //         errorElement.style.display = "block";
+
+    //         errorElement.textContent = " tên công việc";
+    //     } else {
+    //         errorElement.style.display =" none";
+
+    //         inputVlaue = event.target.value;
+    //     }
+    //     console.log(event.target.value);
+        
+    //   });
+
+      //submit form
+      formElement.addEventListener("submit", function(event){
+        event.preventDefault();
+        console.log("submited");
+        
+      });
+
+      const newJob = {
+        id: Math.ceil(Math.random()* 100),
+        name: inputVlaue,
+        status: false,
+      };
+
+      job.push(newJob);
+      alert("Thêm công việc thành công");
+    </script>
+  </body>
+</html>

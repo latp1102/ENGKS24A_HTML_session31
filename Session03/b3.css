@@ -1,0 +1,27 @@
+.d-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.purple {
+  background-color: violet; 
+}
